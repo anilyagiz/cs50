@@ -27,7 +27,7 @@
     "gulp-htmlmin": "^4.0.0",
     "gulp-imagemin": "^4.1.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
+    "gulp-dart-sass": "^1.0.2",
     "gulp-uglify": "3.0.0",
     "imagemin-mozjpeg": "^7.0.0"
   }

@@ -1,5 +1,5 @@
 var gulp = require("gulp");
-var sass = require("gulp-sass");
+var sass = require("gulp-dart-sass");
 var cleanCSS = require("gulp-clean-css");
 var autoprefixer = require("gulp-autoprefixer");
 var rename = require("gulp-rename");
@@ -17,11 +17,9 @@ gulp.task("css:compile", function() {
   return gulp
     .src("./src/scss/**/*.scss")
     .pipe(
-      sass
-        .sync({
-          outputStyle: "expanded"
-        })
-        .on("error", sass.logError)
+      sass({
+        outputStyle: "expanded"
+      }).on("error", sass.logError)
     )
     .pipe(
       autoprefixer({
