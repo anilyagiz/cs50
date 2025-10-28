@@ -1,6 +1,3 @@
-# InOut: India's biggest community hackathon
-
-Website for InOut 5.0
 
 ## Installation
 
