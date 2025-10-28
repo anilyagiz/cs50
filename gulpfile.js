@@ -1,4 +1,5 @@
 var gulp = require("gulp");
+var { src, dest, series, parallel, watch } = gulp;
 var sass = require("gulp-dart-sass");
 var cleanCSS = require("gulp-clean-css");
 var autoprefixer = require("gulp-autoprefixer");
@@ -7,15 +8,13 @@ var uglify = require("gulp-uglify");
 var imagemin = require("gulp-imagemin");
 var htmlmin = require("gulp-htmlmin");
 var browserSync = require("browser-sync").create();
-var clean = require("gulp-clean");
+var del = require("del");
 
 // plugin for lossy jpg compression
 var imageminMozjpeg = require("imagemin-mozjpeg");
 
-// Compile SCSS
-gulp.task("css:compile", function() {
-  return gulp
-    .src("./src/scss/**/*.scss")
+function cssCompile() {
+  return src("./src/scss/**/*.scss")
     .pipe(
       sass({
         outputStyle: "expanded"
@@ -23,7 +22,8 @@ gulp.task("css:compile", function() {
     )
     .pipe(
       autoprefixer({
-        browsers: ["last 4 versions"]
+        overrideBrowserslist: ["last 4 versions"],
+        cascade: false
       })
     )
     .pipe(cleanCSS())
@@ -32,40 +32,39 @@ gulp.task("css:compile", function() {
         suffix: ".min"
       })
     )
-    .pipe(gulp.dest("./public/css"))
+    .pipe(dest("./public/css"))
     .pipe(browserSync.stream());
-});
+}
+cssCompile.displayName = "css:compile";
 
-gulp.task("css:copy", function() {
-  return gulp.src("./src/scss/*.css").pipe(gulp.dest("./public/css"));
-});
+function cssCopy() {
+  return src("./src/scss/*.css")
+    .pipe(dest("./public/css"))
+    .pipe(browserSync.stream());
+}
+cssCopy.displayName = "css:copy";
 
-// CSS
-gulp.task("css", ["css:compile"]);
+var css = parallel(cssCompile, cssCopy);
+css.displayName = "css";
 
-// Minify JavaScript
-gulp.task("js:minify", function() {
-  return gulp
-    .src(["./src/js/*.js", "!./src/js/*.min.js"])
+function jsMinify() {
+  return src(["./src/js/*.js", "!./src/js/*.min.js"])
     .pipe(uglify())
     .pipe(
       rename({
         suffix: ".min"
       })
     )
-    .pipe(gulp.dest("./public/js"))
+    .pipe(dest("./public/js"))
     .pipe(browserSync.stream());
-});
+}
+jsMinify.displayName = "js:minify";
 
-// JS
-gulp.task("js", ["js:minify"]);
+var js = jsMinify;
+js.displayName = "js";
 
-// Task to copy files and assets
-
-// Optimize images
-gulp.task("copy:images", function() {
-  return gulp
-    .src("./src/img/**/*")
+function copyImages() {
+  return src("./src/img/**/*")
     .pipe(
       imagemin([
         imageminMozjpeg({
@@ -76,75 +75,86 @@ gulp.task("copy:images", function() {
         imagemin.svgo()
       ])
     )
-    .pipe(gulp.dest("./public/img"));
-});
+    .pipe(dest("./public/img"));
+}
+copyImages.displayName = "copy:images";
 
-gulp.task("copy:favicons", function() {
-  return gulp
-    .src("./src/favicons/*")
+function copyFavicons() {
+  return src("./src/favicons/*")
     .pipe(imagemin())
-    .pipe(gulp.dest("./public/favicons"));
-});
+    .pipe(dest("./public/favicons"));
+}
+copyFavicons.displayName = "copy:favicons";
 
-gulp.task("copy:files", function() {
-  return gulp
-    .src([
+function copyFiles() {
+  return src([
+    "./src/*.*",
+    "./src/*/*.woff",
+    "./src/*/*.min.css",
+    "./src/*/*.min.js",
+    "!./src/**/*.html"
+  ]).pipe(dest("./public/"));
+}
+copyFiles.displayName = "copy:files";
+
+var copy = parallel(copyImages, copyFavicons, copyFiles);
+copy.displayName = "copy";
+
+function htmlMinify() {
+  return src("./src/**/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(dest("./public/"))
+    .pipe(browserSync.stream());
+}
+htmlMinify.displayName = "html:minify";
+
+var html = htmlMinify;
+html.displayName = "html";
+
+function clean() {
+  return del(["public"]);
+}
+clean.displayName = "clean";
+
+function serve() {
+  browserSync.init({
+    server: {
+      baseDir: "./public"
+    },
+    port: "8080"
+  });
+
+  watch("./src/scss/**/*.scss", css);
+  watch("./src/scss/*.css", cssCopy);
+  watch("./src/js/*.js", jsMinify);
+  watch("./src/**/*.html", htmlMinify);
+  watch(
+    [
+      "./src/img/**/*",
+      "./src/favicons/*",
       "./src/*.*",
       "./src/*/*.woff",
       "./src/*/*.min.css",
-      "./src/*/*.min.js",
-      "!./src/**/*.html"
-    ])
-    .pipe(gulp.dest("./public/"));
-});
+      "./src/*/*.min.js"
+    ],
+    copy
+  );
+}
 
-// Files
-gulp.task("copy", ["copy:images", "copy:favicons", "copy:files"]);
+var build = parallel(css, js, copy, html);
 
-gulp.task("html:minify", function() {
-  return gulp
-    .src("./src/**/*.html")
-    .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest("./public/"))
-    .pipe(browserSync.stream());
-});
-
-gulp.task("html", ["html:minify"]);
-
-// Configure the browserSync task
-gulp.task("browserSync", ["build"], function() {
-  browserSync.init({
-    server: {
-      baseDir: "./public"
-    },
-    port: "8080"
-  });
-});
-
-// Clean /public
-gulp.task("clean", function() {
-  return gulp.src("public", { read: false }).pipe(clean());
-});
-
-// Dev task without copying
-gulp.task("serve", ["css", "js", "html"], function() {
-  gulp.watch("./src/scss/*.scss", ["css"]);
-  gulp.watch("./src/js/*.js", ["js"]);
-  gulp.watch("./src/**/*.html", ["html"]);
-  browserSync.init({
-    server: {
-      baseDir: "./public"
-    },
-    port: "8080"
-  });
-});
-
-// Build task
-gulp.task("build", ["css", "js", "copy", "html"]);
-
-// Dev task
-gulp.task("default", ["build", "browserSync"], function() {
-  gulp.watch("./src/scss/*.scss", ["css"]);
-  gulp.watch("./src/js/*.js", ["js"]);
-  gulp.watch("./src/**/*.html", ["html"]);
-});
+exports.clean = clean;
+exports.css = css;
+exports["css:compile"] = cssCompile;
+exports["css:copy"] = cssCopy;
+exports.js = js;
+exports["js:minify"] = jsMinify;
+exports.copy = copy;
+exports["copy:images"] = copyImages;
+exports["copy:favicons"] = copyFavicons;
+exports["copy:files"] = copyFiles;
+exports.html = html;
+exports["html:minify"] = htmlMinify;
+exports.build = build;
+exports.serve = series(build, serve);
+exports.default = exports.serve;
