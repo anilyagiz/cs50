@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>CS50x Türkiye | </title>
+
+  <!-- Meta tags -->
+  <meta property="fb:app_id" content="349176421957919" />
+  <meta property="og:title" content="CS50x Türkiye | 12 - 14 Ekim 2018">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cs50xturkiye.com">
+  <meta property="og:image" content="https://hackinout.co/img/fb-ogimage.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:description" content="CS50x Türkiye buluşması: Türkiye'nin dört bir yanından CS50 topluluğunu bir araya getiriyoruz.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@cs50xturkiye">
+  <meta name="twitter:site" content="@cs50xturkiye">
+  <meta name="twitter:title" content="CS50x Türkiye | 12 - 14 Ekim 2018">
+  <meta name="twitter:description" content="CS50x Türkiye buluşması: Türkiye'nin dört bir yanından CS50 topluluğunu bir araya getiriyoruz.">
+  <meta name="twitter:domain" content="https://cs50xturkiye.com">
+  <meta name="twitter:image:src" content="https://hackinout.co/img/twitter-og.png">
+  <meta name="description" content="CS50x Türkiye: CS50 topluluğunun İstanbul'daki buluşması.">
+  <meta name="keywords" content="cs50, cs50x türkiye, cs50 etkinliği, cs50 topluluğu, cs50x turkey" />
+  <meta name="author" content="CS50x Türkiye Ekibi" />
+  <meta http-equiv="cache-control" content="public" />
+  <meta http-equiv="expires" content="Monday, 27 August 2018, 00:00:00 GMT" />
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="favicons/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicons/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicons/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="favicons/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="favicons/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="favicons/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="favicons/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="favicons/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="favicons/favicon-196x196.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16" />
+  <meta name="application-name" content="CS50x Türkiye" />
+  <meta name="msapplication-TileColor" content="#c1121f" />
+  <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png" />
+  <meta name="msapplication-square70x70logo" content="favicons/mstile-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="favicons/mstile-150x150.png" />
+  <meta name="msapplication-wide310x150logo" content="favicons/mstile-310x150.png" />
+  <meta name="msapplication-square310x310logo" content="favicons/mstile-310x310.png" />
+  <meta name="theme-color" content="#c1121f" />
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/main.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Hero -->
+  <header id="header">
+    <div class="hero-image">
+      <img src="img/hero-mobile.png" alt="CS50x Türkiye Hero Image" class="img-fluid d-block d-md-none" />
+      <div class="hero-container d-none d-md-block">
+        <div id="heroImage">
+          <img src="img/hero@2x.png" srcset="img/hero.png 1x, img/hero@2x.png 2x" alt="Hero Image" class="img-fluid background" />
+
+          <img src="img/art-circle-2@2x.png" srcset="img/art-circle-2.png 1x, img/art-circle-2@2x.png 2x" alt="circle"
+            class="art-item circle big c1" />
+          <img src="img/art-circle-2@2x.png" srcset="img/art-circle-2.png 1x, img/art-circle-2@2x.png 2x" alt="circle"
+            class="art-item circle big c2" />
+          <img src="img/art-circle-1@2x.png" srcset="img/art-circle-1.png 1x, img/art-circle-1@2x.png 2x" alt="circle"
+            class="art-item circle c3" />
+          <img src="img/art-circle-2@2x.png" srcset="img/art-circle-2.png 1x, img/art-circle-2@2x.png 2x" alt="circle"
+            class="art-item circle c4" />
+          <img src="img/art-circle-1@2x.png" srcset="img/art-circle-1.png 1x, img/art-circle-1@2x.png 2x" alt="circle"
+            class="art-item circle c5" />
+          <img src="img/art-circle-2@2x.png" srcset="img/art-circle-2.png 1x, img/art-circle-2@2x.png 2x" alt="circle"
+            class="art-item circle c6" />
+          <img src="img/art-circle-1@2x.png" srcset="img/art-circle-1.png 1x, img/art-circle-1@2x.png 2x" alt="circle"
+            class="art-item circle c7" />
+          <img src="img/art-circle-1@2x.png" srcset="img/art-circle-1.png 1x, img/art-circle-1@2x.png 2x" alt="circle"
+            class="art-item circle c8" />
+          <img src="img/art-circle-2@2x.png" srcset="img/art-circle-2.png 1x, img/art-circle-2@2x.png 2x" alt="circle"
+            class="art-item circle big c9" />
+          <img src="img/art-circle-2@2x.png" srcset="img/art-circle-2.png 1x, img/art-circle-2@2x.png 2x" alt="circle"
+            class="art-item circle c10" />
+          <img src="img/art-circle-2@2x.png" srcset="img/art-circle-2.png 1x, img/art-circle-2@2x.png 2x" alt="circle"
+            class="art-item circle big c11" />
+          <img src="img/art-circle-2@2x.png" srcset="img/art-circle-2.png 1x, img/art-circle-2@2x.png 2x" alt="circle"
+            class="art-item circle c12" />
+          <img src="img/art-circle-2@2x.png" srcset="img/art-circle-2.png 1x, img/art-circle-2@2x.png 2x" alt="circle"
+            class="art-item circle big c13" />
+
+          <img src="img/art-box@2x.png" srcset="img/art-box.png 1x, img/art-box@2x.png 2x" alt="box" class="art-item box b1" />
+          <img src="img/art-box@2x.png" srcset="img/art-box.png 1x, img/art-box@2x.png 2x" alt="box" class="art-item box b2" />
+          <img src="img/art-box@2x.png" srcset="img/art-box.png 1x, img/art-box@2x.png 2x" alt="box" class="art-item box b3" />
+          <img src="img/art-box@2x.png" srcset="img/art-box.png 1x, img/art-box@2x.png 2x" alt="box" class="art-item box b4" />
+
+          <img src="img/art-car@2x.png" srcset="img/art-car.png 1x, img/art-car@2x.png 2x" alt="car" class="art-item vehicle v1" />
+          <img src="img/art-car@2x.png" srcset="img/art-car.png 1x, img/art-car@2x.png 2x" alt="car" class="art-item vehicle v2" />
+
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.5 25.6" class="art-item wifi w1" fill="#ff858a">
+            <path class="eb5ef480-c6df-43b6-9c8a-f4e2022e45c3" d="M11 .9C6.8 2.6 3 6.5.5 11.9L0 13l.6.6 2 1.8.6.5.4-.9c2-4.1 4.8-7 8-8.4a8.6 8.6 0 0 1 9 1.5l.6.5.4-1L23 4.4l.4-1-.6-.5A11.2 11.2 0 0 0 11 1z" />
+            <path class="eb5ef480-c6df-43b6-9c8a-f4e2022e45c3" d="M19.7 10.3A7.5 7.5 0 0 0 12 9l-.5.2a14.7 14.7 0 0 0-6.5 7l-.5 1 .6.5 2 1.8.6.5.4-.8a9.3 9.3 0 0 1 4.5-4.6 4.9 4.9 0 0 1 5 .7l.5.5.4-1 1.5-3.1.4-1-.6-.5z" />
+            <path class="eb5ef480-c6df-43b6-9c8a-f4e2022e45c3" d="M13.6 25.6l.4-1 2.4-5 .4-1-.6-.6a3.4 3.4 0 0 0-3.4-.2 6.6 6.6 0 0 0-3 2.8l-.6 1 .6.6 3.2 2.9z" /></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.5 25.6" class="art-item wifi w2" fill="#ff858a">
+            <path class="eb5ef480-c6df-43b6-9c8a-f4e2022e45c3" d="M11 .9C6.8 2.6 3 6.5.5 11.9L0 13l.6.6 2 1.8.6.5.4-.9c2-4.1 4.8-7 8-8.4a8.6 8.6 0 0 1 9 1.5l.6.5.4-1L23 4.4l.4-1-.6-.5A11.2 11.2 0 0 0 11 1z" />
+            <path class="eb5ef480-c6df-43b6-9c8a-f4e2022e45c3" d="M19.7 10.3A7.5 7.5 0 0 0 12 9l-.5.2a14.7 14.7 0 0 0-6.5 7l-.5 1 .6.5 2 1.8.6.5.4-.8a9.3 9.3 0 0 1 4.5-4.6 4.9 4.9 0 0 1 5 .7l.5.5.4-1 1.5-3.1.4-1-.6-.5z" />
+            <path class="eb5ef480-c6df-43b6-9c8a-f4e2022e45c3" d="M13.6 25.6l.4-1 2.4-5 .4-1-.6-.6a3.4 3.4 0 0 0-3.4-.2 6.6 6.6 0 0 0-3 2.8l-.6 1 .6.6 3.2 2.9z" /></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.5 25.6" class="art-item wifi w3" fill="#ff858a">
+            <path class="eb5ef480-c6df-43b6-9c8a-f4e2022e45c3" d="M11 .9C6.8 2.6 3 6.5.5 11.9L0 13l.6.6 2 1.8.6.5.4-.9c2-4.1 4.8-7 8-8.4a8.6 8.6 0 0 1 9 1.5l.6.5.4-1L23 4.4l.4-1-.6-.5A11.2 11.2 0 0 0 11 1z" />
+            <path class="eb5ef480-c6df-43b6-9c8a-f4e2022e45c3" d="M19.7 10.3A7.5 7.5 0 0 0 12 9l-.5.2a14.7 14.7 0 0 0-6.5 7l-.5 1 .6.5 2 1.8.6.5.4-.8a9.3 9.3 0 0 1 4.5-4.6 4.9 4.9 0 0 1 5 .7l.5.5.4-1 1.5-3.1.4-1-.6-.5z" />
+            <path class="eb5ef480-c6df-43b6-9c8a-f4e2022e45c3" d="M13.6 25.6l.4-1 2.4-5 .4-1-.6-.6a3.4 3.4 0 0 0-3.4-.2 6.6 6.6 0 0 0-3 2.8l-.6 1 .6.6 3.2 2.9z" /></svg>
+        </div>
+      </div>
+    </div>
+    <div class="container position-relative mt-4 mt-lg-0 mb-lg-5">
+      <div class="d-flex justify-content-center flex-column flex-md-row align-items-center">
+        <div class="header-text mx-lg-5 text-center text-md-left">
+          <div class="subtitle">print("Merhaba, Türkiye!")</div>
+          <div class="title mt-2">CS50xTürkiye ile Harvard CS50x deneyimini şimdi yaşayın</div>
+        </div>
+        <div class="d-flex flex-column align-items-center mx-md-5 mt-md-0 mt-5">
+          <a class="btn btn-primary btn-lg py-3 px-5 apply-btn" href="https://lnkd.in/dunU5WSz">
+            Kampüs Elçisi Başvurusu
+          </a>
+          <div class="timer-text" id="timer">CS50xTürkiye Kampüs Elçisi Başvuruları Açık!</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <div class="container sticky-top navbar-container">
+    <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+      <div class="container">
+        <a class="brand-title js-scroll-trigger" href="#header">
+          <img src="img/logo-cs50.svg" alt="CS50x Türkiye logo" />
+        </a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">Hakkında</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#tracks">Alanlar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#schedule">Program</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#sponsors">Üniversiteler</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#faq">SSS</a>
+            </li>
+            <!-- TEAM PAGE WIP
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/team">Team</a>
+            </li>
+            -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-12 text-white">
+          <h2 class="section-heading"> Harvard'ın Küresel Fenomeni CS50x, Artık Seninle!</h2>
+          <p class="mt-3">
+            David J. Malan tarafından verilen ve bir efsaneye dönüşen Harvard Üniversitesi'nin ikonik CS50x bilgisayar bilimleri dersi, artık CS50xTürkiye ile herkes için erişilebilir.
+          </p>
+          <p class="mt-3">
+            Programlama dünyasına en güçlü adımı atın; küresel düzeyde tanınan bir eğitimin ve topluluğun parçası olun. Bu fırsat, sadece bir ders değil; bir kariyerin başlangıç noktası.
+          </p>
+
+          <p class="mt-3">
+            <strong>Misyonumuz: Eriş, Üret ve Birlikte Büyü.</strong><br>
+            CS50xTürkiye olarak tek bir hedefimiz var: Türkiye'nin teknoloji potansiyelini ateşlemek. Bunu dört temel üzerine inşa ediyoruz:
+          </p>
+          <ul class="mt-2">
+            <li><strong>Erişilebilir Kılmak:</strong> Harvard CS50x ana kurslarına ve kaynaklarına herkesin ücretsiz erişimini sağlamak.</li>
+            <li><strong>Değer Üretmek:</strong> Türkiye'nin ihtiyaçlarına yönelik özgün, kaliteli eğitim içerikleri ve projeler geliştirmek.</li>
+            <li><strong>Pratiği Güçlendirmek:</strong> Düzenli hackathon'lar, yarışmalar ve atölye çalışmaları ile teorik bilgiyi pratiğe dökmek.</li>
+            <li><strong>Ekosistem İnşa Etmek:</strong> Üretkenliğin ve iş birliğinin hakim olduğu, sürdürülebilir bir teknoloji topluluğu kurmak.</li>
+          </ul>
+          <p class="mt-4">
+            📣 <strong>Değişime Liderlik Edin: Kampüs Elçisi Olun!</strong><br>
+            CS50xTürkiye ruhunu kendi kampüsünüze taşımaya hazır mısınız? Üniversitenizde teknoloji rüzgarı estirecek etkinlikler, atölyeler ve yarışmalar düzenleyerek bu global hareketin yerel öncüsü siz olun. Bu sadece bir davet değil, bir liderlik çağrısı. Gelin, bu ekosistemi birlikte büyütelim ve daha fazla öğrenciye ilham verelim!
+          </p>
+          <p class="mt-3">
+            <a href="https://lnkd.in/dunU5WSz" target="_blank" class="text-white">Hemen Başvur!</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Welcome -->
+  <section id="welcome">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto text-center text-white">
+          <img class="img-fluid" src="img/title-everyone-welcome.png" alt="Everyone is welcome">
+          <p class="mt-5">
+            <strong>Fikirden Koda, Meraktan Uzmanlığa.</strong><br>
+            İster ilk print("Merhaba, Dünya!") kodunuzu yazıyor olun, ister karmaşık bir yapay zekâ projesi hayal edin; CS50xTürkiye, fikrinizi hayata geçirmeniz için en doğru yer. Mentorlarımız, atölye çalışmalarımız ve destekleyici topluluğumuzla, ihtiyacınız olan tek şey merakınız. Teknik destekten motivasyona kadar gerisini biz hallederiz :)
+          </p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row mt-5 cards">
+          <div class="col-lg-4 col-12 my-3">
+            <div class="card">
+              <img src="img/make-friends.png" alt="Make friends" class="img-fluid">
+              <div class="content">
+                <div class="heading">Sadece Kod Değil, Güçlü Bağlantılar Kurun</div>
+                <div class="body">
+                  Burası sadece bir kurs platformu değil, Türkiye'nin en parlak teknoloji tutkunlarının buluşma noktası. Kendi alanınızda fark yaratan yüzlerce geliştirici, tasarımcı ve girişimci ile tanışın. Profesyonel ağınızı kurun, ilham alın, yeni ekip arkadaşları bulun ve gelecekteki fırsatların kapısını aralayın.
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-4 col-12 my-3">
+            <div class="card">
+              <img src="img/to-learn.png" alt="To learn" class="img-fluid">
+              <div class="content">
+                <div class="heading">Mentor Desteğiyle Birlikte Öğrenin</div>
+                <div class="body">
+                  Öğrenmenin en iyi yolu paylaşmaktır. CS50xTürkiye ekosisteminde, takıldığınız her noktada size yol gösterecek deneyimli mentorlar bulacaksınız. Yeni başlayanlara destek olduğumuz ve bilgiyi birlikte çoğalttığımız bu ortamda, hiçbir soru cevapsız kalmaz.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-12 my-3">
+            <div class="card">
+              <img src="img/to-build.png" alt="To build" class="img-fluid">
+              <div class="content">
+                <div class="heading">Hayal Et, Planla ve Hayata Geçir!</div>
+                <div class="body">
+                  Sadece öğrenmekle kalmayın, üretin! Saf bir düşüncenin, satır satır koda dönüşme sihrine tanıklık edin. Bu platform, kendi fikirlerini projelendirmek, portfolyosunu güçlendirmek ve gerçek dünya problemleri çözmek isteyen herkese açıktır. O sihri bu yıl siz de yaşayın!
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tracks -->
+  <section id="tracks">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto text-center text-white">
+          <img class="img-fluid" src="img/title-amazing-tracks.png" alt="Harika Alanlar">
+          <p class="mt-3">
+            Bu alanlardan birini seçerek yeni teknolojileri keşfedebilir ve projene hız katabilirsin.
+          </p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row track-list mt-5">
+          <button class="btn col-lg-4 col-md-6 track-item" type="button" data-toggle="modal" data-target="#trackModal"
+            data-track="ai">
+            <img src="img/track-ai.png" alt="Yapay Zekâ">
+            <div class="title mt-1">Yapay Zekâ</div>
+            <div class="subtitle mt-1">Detayları Gör</div>
+          </button>
+          <button class="btn col-lg-4 col-md-6 track-item" type="button" data-toggle="modal" data-target="#trackModal"
+            data-track="blockchain">
+            <img src="img/track-blockchain.png" alt="Blokzincir">
+            <div class="title mt-1">Blokzincir</div>
+            <div class="subtitle mt-1">Detayları Gör</div>
+          </button>
+          <button class="btn col-lg-4 col-md-6 track-item" type="button" data-toggle="modal" data-target="#trackModal"
+            data-track="iot">
+            <img src="img/track-iot.png" alt="Nesnelerin İnterneti">
+            <div class="title mt-1">Nesnelerin İnterneti</div>
+            <div class="subtitle mt-1">Detayları Gör</div>
+          </button>
+          <button class="btn col-lg-4 col-md-6 track-item" type="button" data-toggle="modal" data-target="#trackModal"
+            data-track="algorithm">
+            <img src="img/track-algorithm.png" alt="Algoritma">
+            <div class="title mt-1">Algoritma</div>
+            <div class="subtitle mt-1">Detayları Gör</div>
+          </button>
+          <button class="btn col-lg-4 col-md-6 track-item" type="button" data-toggle="modal" data-target="#trackModal"
+            data-track="fintech">
+            <img src="img/track-fintech.png" alt="FinTek">
+            <div class="title mt-1">FinTek</div>
+            <div class="subtitle mt-1">Detayları Gör</div>
+          </button>
+          <button class="btn col-lg-4 col-md-6 track-item" type="button" data-toggle="modal" data-target="#trackModal"
+            data-track="future-mobility">
+            <img src="img/track-future-mobility.png" alt="Geleceğin Mobilitesi">
+            <div class="title mt-1">Geleceğin Mobilitesi</div>
+            <div class="subtitle mt-1">Detayları Gör</div>
+          </button>
+          <button class="btn col-lg-4 col-md-6 track-item" type="button" data-toggle="modal" data-target="#trackModal"
+            data-track="healthtech">
+            <img src="img/track-healthtech.png" alt="Sağlık Teknolojileri">
+            <div class="title mt-1">Sağlık Teknolojileri</div>
+            <div class="subtitle mt-1">Detayları Gör</div>
+          </button>
+          <button class="btn col-lg-4 col-md-6 track-item" type="button" data-toggle="modal" data-target="#trackModal"
+            data-track="ml">
+            <img src="img/track-ml.png" alt="Makine Öğrenmesi">
+            <div class="title mt-1">Makine Öğrenmesi</div>
+            <div class="subtitle mt-1">Detayları Gör</div>
+          </button>
+          <button class="btn col-lg-4 col-md-6 track-item" type="button" data-toggle="modal" data-target="#trackModal"
+            data-track="ar-vr">
+            <img src="img/track-ar-vr.png" alt="AR-VR">
+            <div class="title mt-1">AR &sol; VR</div>
+            <div class="subtitle mt-1">Detayları Gör</div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tracks Modal -->
+    <div class="modal fade" id="trackModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="d-flex">
+            <div class="modal-text">
+              <div class="modal-header">
+                <span class="modal-title">Track title</span>
+              </div>
+              <div class="modal-body">
+                Track body
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn" id="nextTrack">Next track</button>
+              </div>
+            </div>
+            <div class="track-img d-none d-lg-block"></div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sponsors -->
+  <section id="sponsors">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto text-center">
+          <p class="mt-3">
+            Üniversitende kampüs elçisi olmak ister misin? Formu doldur, CS50xTürkiye hareketine katıl!
+            <a href="https://lnkd.in/dunU5WSz" target="_blank" rel="noreferrer">Başvuru Formu</a>
+          </p>
+        </div>
+      </div>
+      <div class="logos">
+        <div class="row justify-content-center">
+          <div class="col-6 col-md-3 col-lg-2 my-3 d-flex align-items-center justify-content-center">
+            <img src="img/20200406222625!Istanbul_Universitesi.png" alt="İstanbul Üniversitesi" class="img-fluid" style="max-height: 80px;">
+          </div>
+          <div class="col-6 col-md-3 col-lg-2 my-3 d-flex align-items-center justify-content-center">
+            <img src="img/Aydın_Adnan_Menderes_University_logo.svg.png" alt="Aydın Adnan Menderes Üniversitesi" class="img-fluid" style="max-height: 80px;">
+          </div>
+          <div class="col-6 col-md-3 col-lg-2 my-3 d-flex align-items-center justify-content-center">
+            <img src="img/Burdur_Mehmet_Akif_Ersoy_University_logotype.svg.png" alt="Burdur Mehmet Akif Ersoy Üniversitesi" class="img-fluid" style="max-height: 80px;">
+          </div>
+          <div class="col-6 col-md-3 col-lg-2 my-3 d-flex align-items-center justify-content-center">
+            <img src="img/Bursa_Uludağ_University_logo.svg.png" alt="Bursa Uludağ Üniversitesi" class="img-fluid" style="max-height: 80px;">
+          </div>
+          <div class="col-6 col-md-3 col-lg-2 my-3 d-flex align-items-center justify-content-center">
+            <img src="img/Deu_logo.png" alt="Dokuz Eylül Üniversitesi" class="img-fluid" style="max-height: 80px;">
+          </div>
+          <div class="col-6 col-md-3 col-lg-2 my-3 d-flex align-items-center justify-content-center">
+            <img src="img/Erciyes_University_logo.svg.png" alt="Erciyes Üniversitesi" class="img-fluid" style="max-height: 80px;">
+          </div>
+          <div class="col-6 col-md-3 col-lg-2 my-3 d-flex align-items-center justify-content-center">
+            <img src="img/Gazi_Üniversitesi_logo.png" alt="Gazi Üniversitesi" class="img-fluid" style="max-height: 80px;">
+          </div>
+          <div class="col-6 col-md-3 col-lg-2 my-3 d-flex align-items-center justify-content-center">
+            <img src="img/Istanbul_Nişantaşı_University_logo.png" alt="Nişantaşı Üniversitesi" class="img-fluid" style="max-height: 80px;">
+          </div>
+          <div class="col-6 col-md-3 col-lg-2 my-3 d-flex align-items-center justify-content-center">
+            <img src="img/Koç_University_logo.svg.png" alt="Koç Üniversitesi" class="img-fluid" style="max-height: 80px;">
+          </div>
+          <div class="col-6 col-md-3 col-lg-2 my-3 d-flex align-items-center justify-content-center">
+            <img src="img/LOGO-TR-SB-PNG-1_39f1a628-a7dd-45a9-be3d-83092ae1201a.png" alt="Sabancı Üniversitesi" class="img-fluid" style="max-height: 80px;">
+          </div>
+          <div class="col-6 col-md-3 col-lg-2 my-3 d-flex align-items-center justify-content-center">
+            <img src="img/Sivas_Bilim_ve_Teknoloji_Üniversitesi_logosu.png" alt="Sivas Bilim ve Teknoloji Üniversitesi" class="img-fluid" style="max-height: 80px;">
+          </div>
+          <div class="col-6 col-md-3 col-lg-2 my-3 d-flex align-items-center justify-content-center">
+            <img src="img/TED_Üniversitesi_logosu.png" alt="TED Üniversitesi" class="img-fluid" style="max-height: 80px;">
+          </div>
+          <div class="col-6 col-md-3 col-lg-2 my-3 d-flex align-items-center justify-content-center">
+            <img src="img/Yeditepe_Üniversitesi_logo.png" alt="Yeditepe Üniversitesi" class="img-fluid" style="max-height: 80px;">
+          </div>
+          <div class="col-6 col-md-3 col-lg-2 my-3 d-flex align-items-center justify-content-center">
+            <img src="img/Yıldız_Technical_University_logo_variant.svg.png" alt="Yıldız Teknik Üniversitesi" class="img-fluid" style="max-height: 80px;">
+          </div>
+          <div class="col-6 col-md-3 col-lg-2 my-3 d-flex align-items-center justify-content-center">
+            <img src="img/_giresun-universitesi-log-1229.png" alt="Giresun Üniversitesi" class="img-fluid" style="max-height: 80px;">
+          </div>
+          <div class="col-6 col-md-3 col-lg-2 my-3 d-flex align-items-center justify-content-center">
+            <img src="img/_var_opt_upload__ModuleContent_14021_19-03-2024_114147924_S1.png" alt="Üniversite Partneri" class="img-fluid" style="max-height: 80px;">
+          </div>
+          <div class="col-6 col-md-3 col-lg-2 my-3 d-flex align-items-center justify-content-center">
+            <img src="img/ankara-bilim-universitesi-tr.png" alt="Ankara Bilim Üniversitesi" class="img-fluid" style="max-height: 80px;">
+          </div>
+          <div class="col-6 col-md-3 col-lg-2 my-3 d-flex align-items-center justify-content-center">
+            <img src="img/hacettepe-universitesi-logo.png" alt="Hacettepe Üniversitesi" class="img-fluid" style="max-height: 80px;">
+          </div>
+          <div class="col-6 col-md-3 col-lg-2 my-3 d-flex align-items-center justify-content-center">
+            <img src="img/harran%20uni.png" alt="Harran Üniversitesi" class="img-fluid" style="max-height: 80px;">
+          </div>
+          <div class="col-6 col-md-3 col-lg-2 my-3 d-flex align-items-center justify-content-center">
+            <img src="img/istanbul-aydin-universitesi-logo-png_seeklogo-622876.png" alt="İstanbul Aydın Üniversitesi" class="img-fluid" style="max-height: 110px;">
+          </div>
+          <div class="col-6 col-md-3 col-lg-2 my-3 d-flex align-items-center justify-content-center">
+            <img src="img/odtu-logo.png" alt="Orta Doğu Teknik Üniversitesi" class="img-fluid" style="max-height: 110px;">
+          </div>
+          <div class="col-6 col-md-3 col-lg-2 my-3 d-flex align-items-center justify-content-center">
+            <img src="img/samsun%20uni.png" alt="Samsun Üniversitesi" class="img-fluid" style="max-height: 80px;">
+          </div>
+          <div class="col-6 col-md-3 col-lg-2 my-3 d-flex align-items-center justify-content-center">
+            <img src="img/İstanbul_Topkapı_Üniversitesi_logo.png" alt="İstanbul Topkapı Üniversitesi" class="img-fluid" style="max-height: 80px;">
+          </div>
+          <div class="col-6 col-md-3 col-lg-2 my-3 d-flex align-items-center justify-content-center">
+            <img src="img/163291663713.png" alt="Üniversite Partneri" class="img-fluid" style="max-height: 80px;">
+          </div>
+          <div class="col-6 col-md-3 col-lg-2 my-3 d-flex align-items-center justify-content-center">
+            <img src="img/darklogo1.png" alt="Atlas Üniversitesi" class="img-fluid" style="max-height: 80px;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section id="faq">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-lg-10 mx-auto text-center">
+          <img class="img-fluid" src="img/title-faq.png" alt="FAQ.">
+          <p class="mt-3">
+            CS50xTürkiye olarak; cinsiyet, ırk, cinsel yönelim, sosyoekonomik durum, etnik köken veya tecrübe seviyesi gözetmeksizin tüm teknoloji meraklılarını bir araya getirmeyi taahhüt ediyoruz. Bizim için önemli olan tek şey, öğrenme ve üretme tutkunuzdur. Topluluğumuzdaki çeşitliliğin, yenilikçiliğin yakıtı olduğuna inanıyoruz.
+          </p>
+        </div>
+      </div>
+
+      <div class="row mt-5" id="accordion">
+        <div class="col-lg-10 col-12 mx-auto">
+
+          <div class="card my-3">
+            <div class="card-header btn collapsed" id="faqOne" data-toggle="collapse" data-target="#collapseOne"
+              aria-expanded="true" aria-controls="collapseOne">Kimler katılabilir?
+            </div>
+
+            <div id="collapseOne" class="collapse" aria-labelledby="faqOne" data-parent="#accordion">
+              <div class="card-body pt-2">
+                CS50xTürkiye topluluğuna bilgisayar bilimi ve teknolojiye ilgi duyan herkes katılabilir. Lise öğrencisi, üniversiteli, mezun ya da profesyonel olmanız fark etmez.
+              </div>
+            </div>
+          </div>
+
+          <div class="card my-3">
+            <div class="card-header btn collapsed" id="faqTwo" data-toggle="collapse" data-target="#collapseTwo"
+              aria-expanded="true" aria-controls="collapseTwo">
+              Başvuru süreci nasıl işliyor?
+            </div>
+
+            <div id="collapseTwo" class="collapse" aria-labelledby="faqTwo" data-parent="#accordion">
+              <div class="card-body pt-2">
+                <a href="https://lnkd.in/dunU5WSz" target="_blank" rel="noreferrer">Başvuru formumuzu</a> doldurun, motivasyonunuzu ve hedeflerinizi paylaşın. Ekibimiz başvuruları düzenli olarak değerlendirir ve sonuçları e-posta ile bildirir. Kabul edildiğinizde topluluk kanallarımıza ve kaynak kütüphanemize erişim bilgilerini sizinle paylaşırız.
+              </div>
+            </div>
+          </div>
+
+          <div class="card my-3">
+            <div class="card-header btn collapsed" id="faqThree" data-toggle="collapse" data-target="#collapseThree"
+              aria-expanded="true" aria-controls="collapseThree">
+              Arkadaşlarımla birlikte başvurabilir miyim?
+            </div>
+
+            <div id="collapseThree" class="collapse" aria-labelledby="faqThree" data-parent="#accordion">
+              <div class="card-body pt-2">
+                Kampüs elçisi programı bireysel yürütülür; her kampüs için tek bir ana iletişim noktası belirleriz. Yine de kampüsünüzde birlikte çalışmak istediğiniz ekip arkadaşlarınız varsa, formda bunu belirtin; planlama sürecinde birlikte hareket etmenizi destekleriz.
+              </div>
+            </div>
+          </div>
+
+          <div class="card my-3">
+            <div class="card-header btn collapsed" id="faqFour" data-toggle="collapse" data-target="#collapseFour"
+              aria-expanded="true" aria-controls="collapseFour">
+              Etkinlik fikrim yoksa ne yapmalıyım?
+            </div>
+
+            <div id="collapseFour" class="collapse" aria-labelledby="faqFour" data-parent="#accordion">
+              <div class="card-body pt-2">
+                Endişelenmeyin! Başvuru kabulünüzle birlikte örnek etkinlik planları, içerik önerileri ve CS50xTürkiye mentorluk desteğini içeren rehberimizi paylaşacağız. Ayrıca topluluk Discord'umuzda diğer elçilerle beyin fırtınası yapabilir ve hazır şablonlardan yararlanabilirsiniz.
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="card my-3">
+            <div class="card-header btn collapsed" id="faqSix" data-toggle="collapse" data-target="#collapseSix"
+              aria-expanded="true" aria-controls="collapseSix">
+              Hangi kaynaklara erişim sağlayacağım?
+            </div>
+
+            <div id="collapseSix" class="collapse" aria-labelledby="faqSix" data-parent="#accordion">
+              <div class="card-body pt-2">
+                Kabul edilen elçiler, CS50x modüllerine yönlendirme kılavuzları, Türkçe özet videolar, etkinlik düzenleme kitleri ve mentorluk saatlerine erişim elde eder. Ayrıca Harvard CS50 ekibinden güncel duyuruları içeren aylık bültenleri e-posta ile paylaşırız.
+              </div>
+            </div>
+          </div>
+
+          <div class="card my-3">
+            <div class="card-header btn collapsed" id="faqSeven" data-toggle="collapse" data-target="#collapseSeven"
+              aria-expanded="true" aria-controls="collapseSeven">
+              Mentor veya gönüllü olarak destek olabilir miyim?
+            </div>
+
+            <div id="collapseSeven" class="collapse" aria-labelledby="faqSeven" data-parent="#accordion">
+              <div class="card-body pt-2">
+                Elbette! Teknik veya organizasyonel deneyiminizle topluluğa destek olmak istiyorsanız
+                <a href="mailto:iletisim@cs50xturkiye.com">iletisim@cs50xturkiye.com</a> adresinden bize ulaşın. Size uygun mentorluk veya gönüllü rolü hakkında en kısa sürede geri dönüş yaparız.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+
+    </div>
+  </section>
+
+  <section id="cta">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto text-center">
+
+          <div class="mt-5 mx-auto"></div>
+          <a class="btn btn-primary btn-lg py-3 px-5 apply-btn" href="https://lnkd.in/dunU5WSz" style="display: inline-block">
+            Kampüs Elçisi Başvurusu
+          </a>
+          <div class="timer-text" id="timer">CS50xTürkiye Kampüs Elçisi Başvuruları Açık!</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <section id="footer">
+    <!-- Social Links -->
+    <div id="social">
+      <div class="container">
+        <div class="social-links">
+          <div class="row">
+            <a target="_blank" href="https://twitter.com/cs50xturkiye" class="col-4 social-link twitter">
+              <span class="social-icon twitter"></span>
+            </a>
+            <a target="_blank" href="https://www.facebook.com/cs50xturkiye/" class="col-4 social-link facebook">
+              <span class="social-icon facebook"></span>
+            </a>
+            <a target="_blank" href="https://www.instagram.com/cs50xturkiye/" class="col-4 social-link instagram">
+              <span class="social-icon instagram"></span>
+            </a>
+            <a target="_blank" href="https://www.linkedin.com/company/cs50xturkiye/" class="col-4 social-link linkedin">
+              <span class="social-icon linkedin"></span>
+            </a>
+            <a target="_blank" href="https://t.me/cs50xturkiye" class="col-4 social-link telegram">
+              <span class="social-icon telegram"></span>
+            </a>
+            <a target="_blank" href="https://medium.com/cs50xturkiye" class="col-4 social-link medium">
+              <span class="social-icon medium"></span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-image">
+      <img src="img/hero-mobile.png" alt="CS50x Türkiye" class="img-fluid d-block d-md-none" />
+      <div class="footer-animated-image">
+        <div id="footerImage" class="d-none d-md-block">
+          <img src="img/footer@2x.png" srcset="img/footer.png 1x, img/footer@2x.png 2x" alt="Footer Image" class="img-fluid background" />
+
+          <img src="img/art-circle-2@2x.png" srcset="img/art-circle-2.png 1x, img/art-circle-2@2x.png 2x" alt="circle"
+            class="art-item circle c1" />
+          <img src="img/art-circle-2@2x.png" srcset="img/art-circle-2.png 1x, img/art-circle-2@2x.png 2x" alt="circle"
+            class="art-item circle big c2" />
+
+          <img src="img/art-box@2x.png" srcset="img/art-box.png 1x, img/art-box@2x.png 2x" alt="box" class="art-item box b1" />
+          <img src="img/art-box@2x.png" srcset="img/art-box.png 1x, img/art-box@2x.png 2x" alt="box" class="art-item box b2" />
+
+          <img src="img/art-car@2x.png" srcset="img/art-car.png 1x, img/art-car@2x.png 2x" alt="car" class="art-item vehicle v1" />
+        </div>
+      </div>
+      <div class="footer-container position-relative">
+        <div class="container">
+
+          <div class="footer-bar d-flex justify-content-between flex-column flex-md-row align-items-center">
+            <div>
+              <a href="/code-of-conduct">Davranış Kuralları</a>
+            </div>
+            <div>
+              <a href="#header" class="js-scroll-trigger">
+                <img src="img/logo-cs50-white.svg" alt="CS50x Türkiye Logo">
+              </a>
+            </div>
+            <div>
+              <a href="https://singularityrd.com" target="_blank" rel="noreferrer">
+                &lt;/&gt; with &#9829;
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts -->
+  <script src="js/main.min.js"></script>
+  <script src="js/track-modal.min.js" defer></script>
+
+  <!-- Devfolio Apply Now script -->
+  <!-- <script src="https://apply.devfolio.co"></script> -->
+
+  <script>
+    // Preload minus icon for accordion
+    if (document.images) {
+      (new Image()).src = "img/icon-minus.svg";
+    }
+
+    // Add class to parent on accordion switch
+    $(document).ready(function () {
+      // var disableApplyButtons = function () {
+      //   $('#applynow-button-cta, #applynow-button-hero').html("Applications are closed.").addClass('disabled').attr('disabled', true);
+      // }
+
+      $('.collapse').on('show.bs.collapse', function () {
+        $(this).parent('.card').addClass('active transition');
+      });
+
+      $('.collapse').on('hide.bs.collapse', function () {
+        $(this).parent('.card').removeClass('active');
+        $(this).parent('.card').addClass('transition');
+      });
+
+      $('.collapse').on('shown.bs.collapse hidden.bs.collapse', function () {
+        $(this).parent('.card').removeClass('transition');
+      });
+
+      // $('#applynow-button-cta, #applynow-button-hero').removeClass('disabled');
+
+      // // Create a local date object for application close date (29th Sept, 2018, 03:00:00)
+      // var applicationCloseTime = new Date('2018-09-29T03:00:00');
+
+      // // Once the difference with current time is negative, disable the buttons
+      // // And change the timer text
+      // if (applicationCloseTime.getTime() - Date.now() < 0) {
+      //   $('#timer').html("See you in the next edition!")
+      //   disableApplyButtons();
+      // }
+    });
+
+    // function openModal() {
+    //   try {
+    //     var devfolio = new Devfolio('inout');
+    //     devfolio.open();
+    //   } catch (error) {
+    //     console.log(error);
+    //     alert(
+    //       'Devfolio requires an external script to be loaded. Please disable any script blockers on this page and refresh to continue.'
+    //     )
+    //   }
+    // }
+
+    // document.querySelector('#applynow-button-hero').addEventListener('click', openModal);
+    // document.querySelector('#applynow-button-cta').addEventListener('click', openModal);
+
+    // Register the service worker
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js').then(function (registration) {
+        // Registration was successful
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      }).catch(function (err) {
+        // registration failed :(
+        console.log('ServiceWorker registration failed: ', err);
+      });
+    }
+
+  </script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112787491-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-112787491-1');
+
+    (function (h, o, t, j, a, r) {
+      h.hj = h.hj || function () {
+        (h.hj.q = h.hj.q || []).push(arguments)
+      };
+      h._hjSettings = {
+        hjid: 565518,
+        hjsv: 6
+      };
+      a = o.getElementsByTagName('head')[0];
+      r = o.createElement('script');
+      r.async = 1;
+      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+
+  </script>
+
+</body>
+
+</html>
